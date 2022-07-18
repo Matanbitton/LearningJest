@@ -1,0 +1,19 @@
+{
+  "name": "learningjest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matanbitton/LearningJest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matanbitton/LearningJest/issues"
+  },
+  "homepage": "https://github.com/Matanbitton/LearningJest#readme"
+}
