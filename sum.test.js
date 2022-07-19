@@ -2,6 +2,7 @@ const module = require("./sum");
 const sum = module.sum;
 const capitalize = module.capitalize;
 const reverseString = module.reverseString;
+const calculator = module.calculator;
 
 // this test uses the expect and toBe syntax that
 test("add 1 + 2", () => {
@@ -111,4 +112,11 @@ test("capitalize first character", () => {
 
 test("reverse string", () => {
   expect(reverseString("toast")).toMatch("tsaot");
+});
+
+test("calculator", () => {
+  expect(calculator.add(1, 2)).toEqual(3);
+  expect(calculator.subtract(6, 2)).toEqual(4);
+  expect(calculator.multiply(6, 2)).toEqual(12);
+  expect(calculator.divide(6, 2)).toEqual(3);
 });

@@ -16,6 +16,21 @@ const reverseString = (str) => {
   return reverseString;
 };
 
+const calculator = {
+  add: (a, b) => {
+    return a + b;
+  },
+  subtract: (a, b) => {
+    return a - b;
+  },
+  multiply(a, b) {
+    return a * b;
+  },
+  divide(a, b) {
+    return a / b;
+  },
+};
+
 // this exports the function to the test
 
-module.exports = { sum, capitalize, reverseString };
+module.exports = { calculator, sum, capitalize, reverseString };
