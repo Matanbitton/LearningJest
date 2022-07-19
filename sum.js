@@ -31,6 +31,54 @@ const calculator = {
   },
 };
 
+function ceasersCipher(str, shiftNum) {
+  str = str.toLowerCase();
+  let abc = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  let finalStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    let temp = str[i];
+    if (abc.includes(temp)) {
+      let placeInArr = abc.indexOf(temp) + shiftNum;
+      if (placeInArr >= abc.length) {
+        placeInArr = placeInArr % 26;
+      }
+      finalStr += abc[placeInArr];
+    } else {
+      finalStr += temp;
+    }
+  }
+
+  return finalStr;
+}
+
 // this exports the function to the test
 
-module.exports = { calculator, sum, capitalize, reverseString };
+module.exports = { ceasersCipher, calculator, sum, capitalize, reverseString };

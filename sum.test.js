@@ -3,6 +3,7 @@ const sum = module.sum;
 const capitalize = module.capitalize;
 const reverseString = module.reverseString;
 const calculator = module.calculator;
+const ceasersCipher = module.ceasersCipher;
 
 // this test uses the expect and toBe syntax that
 test("add 1 + 2", () => {
@@ -115,8 +116,17 @@ test("reverse string", () => {
 });
 
 test("calculator", () => {
+  expect(calculator).toBeDefined();
+  expect(calculator).not.toBeNull();
   expect(calculator.add(1, 2)).toEqual(3);
   expect(calculator.subtract(6, 2)).toEqual(4);
   expect(calculator.multiply(6, 2)).toEqual(12);
-  expect(calculator.divide(6, 2)).toEqual(3);
+  expect(calculator.divide(6, 2)).toBeCloseTo(3);
+});
+
+test("ceasers Cipher", () => {
+  expect(ceasersCipher("banana", 2)).toMatch("dcpcpc");
+  expect(ceasersCipher("BANANA", 2)).toMatch("dcpcpc");
+  expect(ceasersCipher("Hello World!", 1)).toMatch("ifmmp xpsme!");
+  expect(ceasersCipher("!@#$!@")).toMatch("!@#$!@");
 });
